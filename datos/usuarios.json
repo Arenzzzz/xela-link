@@ -1,0 +1,17 @@
+{
+  "usuarios": {
+    "arenz": {"nombre": "Arenz Peláez", "clave": "1234"},
+    "luis": {"nombre": "Luis Pérez", "clave": "1234"},
+    "ana": {"nombre": "Ana López", "clave": "1234"},
+    "maria": {"nombre": "María García", "clave": "1234"},
+    "carlos": {"nombre": "Carlos Méndez", "clave": "1234"}
+  },
+  "amistades": [
+    ["arenz", "luis", 1],
+    ["arenz", "ana", 3],
+    ["luis", "maria", 2],
+    ["ana", "maria", 1],
+    ["ana", "carlos", 3],
+    ["maria", "carlos", 1]
+  ]
+}
