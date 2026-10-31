@@ -8,7 +8,7 @@ Proyecto final de **Lenguajes Formales y Autómatas**, Universidad Rafael Landí
 
 | Integrante | Rol | Archivos |
 |---|---|---|
-| Moshé Arenz Peláez Virula | Líder técnico: grafo, Dijkstra, integración | `modelo/grafo.py`, `modelo/dijkstra.py`, `main.py` |
+| Moshé Arenz Peláez Virula | Modelo técnico: grafo, Dijkstra, integración | `modelo/grafo.py`, `modelo/dijkstra.py`, `main.py` |
 | Cristhian Estuardo De León Pérez | Autómata y modelo formal | `modelo/automata.py` |
 | Ángel Emmanuel Rodas Berreondo | Interfaz gráfica | `interfaz/login.py`, `interfaz/ventana_principal.py` |
 | Pedro Antonio Monroy Rímola | Datos y visualización | `datos/gestor_json.py`, `datos/usuarios.json`, `interfaz/vista_grafo.py` |
