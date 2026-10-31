@@ -100,3 +100,26 @@ class Grafo:
         """ Devuelve w(u, v): el nivel de cercanía entre dos amigos """
 
         return self.adyacencia[u][v]
+
+    # ---- funciones de red social ----
+    def amigos_en_comun(self, u, v):
+        """ Devuelve los amigos directo que comparten u y v """
+
+        return sorted(set(self.amigos(u)) & set(self.amigos(v)))
+
+    def sugerencias(self, u):
+        """ 'Conocer personas': sugiere amigos de amigos que aún no son amigos de u """
+
+        u = self._normalizar(u)
+        conteo = {}
+
+        # Se recorre cada amigo de u y v, a su vez, los amigos de ese amigo
+        for amigo in self.adyacencia.get(u, {}):
+            for candidato in self.adyacencia[amigo]:
+
+                # Se descarta a 'u' mismo y a quienes ya son sus amigos
+                if candidato != u and not self.son_amigos(u, candidato):
+                    conteo[candidato] = conteo.get(candidato, 0) + 1
+
+        # Más amigos en común primnero; si empatan, en orden alfabético
+        return sorted(conteo.items(), key=lambda par: (-par[1], par[0]))
