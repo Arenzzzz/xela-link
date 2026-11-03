@@ -16,16 +16,34 @@ Proyecto final de **Lenguajes Formales y Autómatas**, Universidad Rafael Landí
 
 ## Cómo ejecutar
 
+Requisitos: Python 3.10 o superior. La interfaz usa **CustomTkinter**, el grafo se dibuja con **NetworkX + Matplotlib** y los datos se guardan en `datos/usuarios.json`.
+
 ```bash
+git clone https://github.com/Arenzzzz/xela-link.git
+cd xela-link
+python3 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python main.py
 ```
 
-Pruebas:
+**Usuario de prueba:** `arenz` / `1234` (todos los usuarios de ejemplo usan la clave `1234`).
+
+> **Mac con Homebrew:** si aparece `No module named '_tkinter'`, instala Tk con `brew install python-tk@3.13` (cambia `3.13` por tu versión de Python) y vuelve a crear el entorno virtual.
+
+### Pruebas
 
 ```bash
 python -m unittest discover pruebas
 ```
+
+Son 18 pruebas sobre el grafo, Dijkstra y el autómata.
+
+### Qué puedes hacer en la app
+
+- **Mis amigos:** agregar amigos con su nivel de cercanía (1 mejor amigo, 2 amigo, 3 conocido), eliminarlos y ver sugerencias de amigos de amigos.
+- **Buscar:** encontrar la cadena de amistades más corta hasta otro usuario, con la tabla de pasos de Dijkstra y el grafo con la ruta resaltada.
+- **Validar cadena:** escribir una ruta (por ejemplo `luis, maria, carlos`) y ver si el autómata la acepta o la rechaza, paso por paso.
 
 ## Estructura
 
